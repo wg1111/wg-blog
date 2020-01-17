@@ -1,7 +1,9 @@
 package com.wg.blog.model;
 
-import java.util.Date;
+import lombok.Data;
 
+import java.util.Date;
+@Data
 public class ArticleCategory {
     private Long id;
 
@@ -13,7 +15,25 @@ public class ArticleCategory {
 
     private Date modifiedBy;
 
-    public Long getId() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*public Long getId() {
         return id;
     }
 
@@ -51,5 +71,5 @@ public class ArticleCategory {
 
     public void setModifiedBy(Date modifiedBy) {
         this.modifiedBy = modifiedBy;
-    }
+    }*/
 }

@@ -1,4 +1,4 @@
-package com.wg.blog.dao;
+package com.wg.blog.mapper;
 
 import com.wg.blog.model.ArticleInfo;
 
