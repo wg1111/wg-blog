@@ -1,7 +1,9 @@
 package com.wg.blog.model;
 
-import java.util.Date;
+import lombok.Data;
 
+import java.util.Date;
+@Data
 public class User {
     private Integer id;
 
@@ -15,11 +17,11 @@ public class User {
 
     private String email;
 
-    private boolean enable;
+    private Integer enable;
 
     private Date creatTime;
 
-    public Integer getId() {
+   /* public Integer getId() {
         return id;
     }
 
@@ -70,7 +72,7 @@ public class User {
     public boolean isEnabled() {
         return enable;
     }
-
+    // public void getEnable() { this.enable = enable;}
     public void setEnable(boolean enable) {
         this.enable = enable;
     }
@@ -81,5 +83,5 @@ public class User {
 
     public void setCreatTime(Date creatTime) {
         this.creatTime = creatTime;
-    }
+    }*/
 }
