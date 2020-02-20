@@ -22,6 +22,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.util.HtmlUtils;
 
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -43,7 +44,7 @@ public class UserController {
     })
     @PostMapping("/login")
     @ResponseBody
-    public Result login(@RequestBody User user){
+    public Result login(@RequestBody User user, HttpSession session){
         String username = user.getUsername();
         String password = user.getPassword();
         log.info("----开始登录----");
@@ -58,6 +59,8 @@ public class UserController {
                 return ResultFactory.buildFailResult(message);
             }
             String message = "登陆成功";
+            //加入缓存，用来判断是否进行登录拦截
+            session.setAttribute("user",user1);
             log.info("登陆成功");
             return ResultFactory.buildSuccessResult(message);
         }catch (AuthenticationException e){

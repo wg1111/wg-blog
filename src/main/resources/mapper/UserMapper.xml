@@ -12,7 +12,7 @@
     <result column="creat_time" jdbcType="TIMESTAMP" property="creatTime" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, username, password, salt, phone, email, enable, creat_time
+     id, username, password, salt, phone, email, enable, creat_time
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select
